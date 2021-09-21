@@ -13,7 +13,7 @@ function Form() {
       .string()
       .matches(/^[A-Za-z]+$/, "Nome deve ter apenas letras")
       .required("Nome obrigatório"),
-    email: yup.string().required("E-mail obrigatório"),
+    email: yup.string().email("Email inválido").required("E-mail obrigatório"),
     password: yup
       .string()
       .min(8, "Mínimo 8 caracteres")
